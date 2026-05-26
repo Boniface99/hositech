@@ -1,0 +1,130 @@
+
+        /* BACKGROUND ANIMATION */
+        .animated-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; overflow: hidden;
+            background-color: #f4f7f6;
+        }
+
+        .animated-bg span {
+            position: absolute; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            animation: slideShow 18s infinite; opacity: 0;
+        }
+
+        /* Note: Ensure these images exist in your /images folder */
+        .animated-bg span:nth-child(1) { background-image: url("images/hospital4.jpg"); animation-delay: 0s; }
+        .animated-bg span:nth-child(2) { background-image: url("images/hospital1.jpg"); animation-delay: 4s; }
+        .animated-bg span:nth-child(3) { background-image: url("images/hospital2.jpg"); animation-delay: 8s; }
+
+        @keyframes slideShow {
+            0% { opacity: 0; }
+            10% { opacity: 0.4; }
+            30% { opacity: 0.4; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        body { font-family: Arial; margin: 0; }
+
+        header {
+            background: #052711; color: white; padding: 15px;
+            text-align: center; box-shadow: 0 4px 10px rgba(20, 108, 210, 0.2);
+             position: sticky;
+        }
+
+        nav {
+            background: #e6a00b; display: flex; justify-content: center;
+            background-color: ;
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .dropdown { position: relative; }
+
+        .dropbtn {
+            padding: 18px 25px; background: none; border: none;
+            cursor: pointer; font-weight: bold; color: white; transition: 0.3s;
+        }
+
+        .dropbtn:hover { color: #1abc9c; background: rgba(66, 87, 248, 0.1); }
+
+        .dropdown-content {
+            display: none; position: absolute; background: white;
+            min-width: 220px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            padding: 10px 0;
+        }
+
+        /* Styling the Ordered List for the requirements */
+        .dropdown-content ol {
+            margin: 0; padding: 0 0 0 35px; /* Space for numbers */
+            color: #2c3e50; font-weight: bold;
+        }
+
+        .dropdown-content ol li { padding: 5px 0; }
+
+        .dropdown-content a {
+            text-decoration: none; color: #333; font-weight: normal;
+            display: inline-block; width: 100%; transition: 0.2s;
+        }
+
+        .dropdown-content a:hover { color: #1abc9c; transform: translateX(5px); }
+
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .main-body { max-width: 1000px; margin: auto; padding: 20px; }
+
+        .registration-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px; border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%; padding: 12px; margin: 10px 0;
+            border: 1px solid #ddd; border-radius: 6px;
+        }
+
+        button {
+            width: 100%; padding: 15px; border: none;
+            background: #1abc9c; color: white; font-size: 16px;
+            border-radius: 6px; cursor: pointer; transition: 0.3s;
+        }
+
+        button:hover { background: #16a085; transform: scale(1.02); }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th { background: #2c3e50; color: white; padding: 12px; }
+        td { padding: 10px; border: 1px solid #ddd; text-align: center; }
+/* --- UPDATED FOOTER & MARQUEE CSS --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 0 0 0; /* Space at top, none at bottom for marquee */
+    margin-top: 50px;
+    width: 100%;
+}
+
+.custom-marquee {
+    width: 100%;
+    background: #fdf2f2; /* Light contrast background */
+    color: #e74c3c;      /* Bright red text */
+    padding: 12px 0;
+    font-weight: bold;
+    overflow: hidden;    /* Hides text that goes off-screen */
+    position: relative;
+    border-top: 2px solid #fadbd8;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 4s linear infinite;
+    font-size: 1.1rem;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
